@@ -8,12 +8,16 @@
 .time-control {
     width: 50%;
     display: flex;
+    align-items: center;
     input {
         width: 100%;
-        padding: 1rem 2rem;
+        padding: 1rem;
     }
     p {
-        padding: 1rem;
+        margin: 0px 10px;
+        width: 65px;
+        text-align: center;
+       
     }
 }
 .play-control {

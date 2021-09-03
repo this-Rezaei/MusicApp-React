@@ -3,9 +3,9 @@ import React from "react";
 const Song = ({ currentSong }) => {
     return (
         <div className="song-container">
-            <img src=""></img>
-            <h2> </h2>
-            <h3></h3>
+            <img src={currentSong.cover}></img>
+            <h2> {currentSong.name}</h2>
+            <p>{currentSong.artist}</p>
         </div>
     );
 };
