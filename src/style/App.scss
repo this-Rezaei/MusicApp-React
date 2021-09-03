@@ -7,9 +7,13 @@
 body {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
+    background: #00adf1;
+    color: white;
 }
-h1,h2,h3{
-    color: rgb(56, 56, 56)
+h1,
+h2,
+h3 {
+    color: rgb(231, 231, 231);
 }
 @import "./player";
 @import "./song";

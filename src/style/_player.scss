@@ -11,13 +11,15 @@
     align-items: center;
     input {
         width: 100%;
-        padding: 1rem;
+        // padding: 1rem;
     }
     p {
         margin: 0px 10px;
         width: 65px;
         text-align: center;
-       
+    }
+    input {
+        width: 100%;
     }
 }
 .play-control {
