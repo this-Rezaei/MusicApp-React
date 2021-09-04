@@ -7,17 +7,18 @@ import {
     faAngleDoubleLeft,
     faPause,
 } from "@fortawesome/free-solid-svg-icons";
-const Player = ({ currentSong, play, setplay }) => {
-    const audioRef = useRef(null);
+const Player = ({
+    currentSong,
+    play,
+    setplay,
+    audioRef,
+    setsongInfo,
+    songInfo,
+}) => {
     const playSongHandler = () => {
         setplay(!play ? audioRef.current.play() : audioRef.current.pause());
     };
-    const TimeUpdatHandler = (e) => {
-        const current = e.target.currentTime;
-        const duration = e.target.duration;
-        // console.log(duration);
-        setsongInfo({ ...songInfo, currentTime: current, duration: duration });
-    };
+
     const getTime = (time) => {
         const minutes = Math.floor(time / 60);
         const returnedMinutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
@@ -30,10 +31,6 @@ const Player = ({ currentSong, play, setplay }) => {
 
         setsongInfo({ ...songInfo, currentTime: e.target.value });
     };
-    const [songInfo, setsongInfo] = useState({
-        currentTime: 0,
-        duration: 0,
-    });
     return (
         <div className="player">
             <div className="time-control">
@@ -69,12 +66,6 @@ const Player = ({ currentSong, play, setplay }) => {
                     icon={faAngleDoubleRight}
                 />
             </div>
-            <audio
-                onTimeUpdate={TimeUpdatHandler}
-                ref={audioRef}
-                src={currentSong.audio}
-                onLoadedMetadata={TimeUpdatHandler}
-            ></audio>
         </div>
     );
 };
