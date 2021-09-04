@@ -26,13 +26,13 @@ const Player = ({ currentSong, play, setplay }) => {
         return `${returnedMinutes}:${returnedSeconds}`;
     };
     const dragHandler = (e) => {
-        audioRef.current.currentTime = e.target.value
-        
+        audioRef.current.currentTime = e.target.value;
+
         setsongInfo({ ...songInfo, currentTime: e.target.value });
     };
     const [songInfo, setsongInfo] = useState({
-        currentTime: null,
-        duration: null,
+        currentTime: 0,
+        duration: 0,
     });
     return (
         <div className="player">

@@ -57,7 +57,7 @@ function chillHipHop() {
             active: false,
         },
         {
-            name: "Eminem & Rihanna - Love The Way You Lie",
+            name: "Eminem & Rihanna",
             cover: "https://images-na.ssl-images-amazon.com/images/I/61aPJZAQ7UL.jpg",
             artist: "Eminem",
             audio: "https://ts2.tarafdari.com/contents/user6984/content-sound/22_-_love_the_way_you_lie_ft_eminem.mp3",
