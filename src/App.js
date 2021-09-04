@@ -34,7 +34,7 @@ const App = () => {
                 audioRef={audioRef}
                 currentSong={currentSong}
             />
-            <Library datas={data} play={play} audioRef={audioRef} setcurrentSong={setcurrentSong} />
+            <Library datas={data} setData={setData} play={play} audioRef={audioRef} setcurrentSong={setcurrentSong} />
             <audio
                 onTimeUpdate={TimeUpdatHandler}
                 ref={audioRef}

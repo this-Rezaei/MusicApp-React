@@ -29,7 +29,7 @@
         border-radius: 50%;
     }
     &:hover {
-        background: #0089be;
+        background: #0080b3;
     }
 }
 .song-description {
@@ -37,4 +37,7 @@
     p {
         font-size: 0.9rem;
     }
+}
+.selected {
+    background: #0080b3;
 }
