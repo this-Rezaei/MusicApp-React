@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import Library from "./components/Library";
+import Nav from "./components/Nav";
 import Player from "./components/Player";
 import Song from "./components/Song";
 import "./style/App.scss";
@@ -11,6 +12,7 @@ const App = () => {
     const [data, setData] = useState(Data());
     const [currentSong, setcurrentSong] = useState(data[0]);
     const [play, setplay] = useState(false);
+    const [ToggelLibrary, setToggelLibrary] = useState(false);
 
     const [songInfo, setsongInfo] = useState({
         currentTime: 0,
@@ -25,6 +27,7 @@ const App = () => {
     };
     return (
         <div className="app">
+            <Nav ToggelLibrary={ToggelLibrary} setToggelLibrary={setToggelLibrary} />
             <Song currentSong={currentSong} />
             <Player
                 play={play}
@@ -34,7 +37,14 @@ const App = () => {
                 audioRef={audioRef}
                 currentSong={currentSong}
             />
-            <Library datas={data} setData={setData} play={play} audioRef={audioRef} setcurrentSong={setcurrentSong} />
+            <Library
+                datas={data}
+                setData={setData}
+                play={play}
+                audioRef={audioRef}
+                setcurrentSong={setcurrentSong}
+                ToggelLibrary={ToggelLibrary}
+            />
             <audio
                 onTimeUpdate={TimeUpdatHandler}
                 ref={audioRef}

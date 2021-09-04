@@ -3,6 +3,24 @@ import { v4 as uuidv4 } from "uuid";
 function chillHipHop() {
     return [
         {
+            name: "Best Friend",
+            cover: "https://m.media-amazon.com/images/I/61dFNOCgGEL._SS500_.jpg",
+            artist: "Yelawolf Ft Eminem",
+            audio: "https://ts7.tarafdari.com/contents/user720453/content-sound/yelawolf_-_best_friend.mp3",
+            color: ["", ""],
+            id: uuidv4(),
+            active: false,
+        },
+        {
+            name: "Godzila",
+            cover: "https://faazmusic.com/wp-content/uploads/2020/01/Eminem-%DA%AF%D9%88%D8%AF%D8%B2%DB%8C%D9%84%D8%A7-500x500.jpg",
+            artist: "Eminem",
+            audio: "https://musicfeed.ir/files/2020/01/Eminem-Godzilla-musicfeed.ir_.mp3?128",
+            color: ["", ""],
+            id: uuidv4(),
+            active: false,
+        },
+        {
             name: "Kamikaze",
             cover: "https://images-na.ssl-images-amazon.com/images/I/71wrmbD%2BkiL._SL1200_.jpg",
             artist: "Eminem",
@@ -20,33 +38,17 @@ function chillHipHop() {
             id: uuidv4(),
             active: false,
         },
-        {
-            name: "Godzila",
-            cover: "https://faazmusic.com/wp-content/uploads/2020/01/Eminem-%DA%AF%D9%88%D8%AF%D8%B2%DB%8C%D9%84%D8%A7-500x500.jpg",
-            artist: "Eminem",
-            audio: "https://musicfeed.ir/files/2020/01/Eminem-Godzilla-musicfeed.ir_.mp3?128",
-            color: ["", ""],
-            id: uuidv4(),
-            active: false,
-        },
+
         {
             name: "Rap God",
             cover: "https://m.media-amazon.com/images/I/6114mqEMi6L._SS500_.jpg",
             artist: "Eminem",
-            audio: "",
+            audio: "http://bayanbox.ir/download/458560857885251225/Eminem-Rap-God.mp3",
             color: ["", ""],
             id: uuidv4(),
             active: false,
         },
-        {
-            name: "Best Friend",
-            cover: "https://m.media-amazon.com/images/I/61dFNOCgGEL._SS500_.jpg",
-            artist: "Yelawolf Ft Eminem",
-            audio: "https://ts7.tarafdari.com/contents/user720453/content-sound/yelawolf_-_best_friend.mp3",
-            color: ["", ""],
-            id: uuidv4(),
-            active: false,
-        },
+
         {
             name: "Vanom",
             cover: "https://upload.wikimedia.org/wikipedia/en/f/f6/Eminem_-_Venom.jpg",
