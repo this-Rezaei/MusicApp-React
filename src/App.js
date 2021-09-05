@@ -27,7 +27,10 @@ const App = () => {
     };
     return (
         <div className="app">
-            <Nav ToggelLibrary={ToggelLibrary} setToggelLibrary={setToggelLibrary} />
+            <Nav
+                ToggelLibrary={ToggelLibrary}
+                setToggelLibrary={setToggelLibrary}
+            />
             <Song currentSong={currentSong} />
             <Player
                 play={play}
@@ -36,6 +39,9 @@ const App = () => {
                 setsongInfo={setsongInfo}
                 audioRef={audioRef}
                 currentSong={currentSong}
+                setcurrentSong={setcurrentSong}
+                datas={data}
+                setData={setData}
             />
             <Library
                 datas={data}

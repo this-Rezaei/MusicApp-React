@@ -1,5 +1,5 @@
 import React from "react";
-
+import { playAudio, NewSong } from "../Logic";
 const LibrarySong = ({
     data,
     setcurrentSong,
@@ -13,23 +13,16 @@ const LibrarySong = ({
         const selectedSong = datas.filter((state) => state.id === id);
         setcurrentSong(selectedSong[0]);
         //check if the song is playing
-        const NewSong = datas.map((data) => {
-            if (data.id === id) {
-                return { ...data, active: true };
-            } else {
-                return { ...data, active: false };
-            }
-        });
+        // const NewSong = datas.map((data) => {
+        //     if (data.id === id) {
+        //         return { ...data, active: true };
+        //     } else {
+        //         return { ...data, active: false };
+        //     }
+        // });
 
-        setData(NewSong);
-        if (play) {
-            const playPromise = audioRef.current.play();
-            if (playPromise !== undefined) {
-                playPromise.then((audio) => {
-                    audioRef.current.play();
-                });
-            }
-        }
+        NewSong(datas,id)
+        playAudio(play, audioRef);
     };
     return (
         <div
