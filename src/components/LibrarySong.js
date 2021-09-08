@@ -9,9 +9,9 @@ const LibrarySong = ({
     play,
     setData,
 }) => {
-    const songSelectHandler = () => {
+    const songSelectHandler = async () => {
         const selectedSong = datas.filter((state) => state.id === id);
-        setcurrentSong(selectedSong[0]);
+        await setcurrentSong(selectedSong[0]);
         //check if the song is playing
         // const NewSong = datas.map((data) => {
         //     if (data.id === id) {
@@ -21,8 +21,8 @@ const LibrarySong = ({
         //     }
         // });
 
-        NewSong(datas,id)
-        playAudio(play, audioRef);
+        await NewSong(datas, id);
+        await playAudio(play, audioRef);
     };
     return (
         <div

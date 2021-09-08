@@ -42,19 +42,19 @@ const Player = ({
         setsongInfo({ ...songInfo, currentTime: e.target.value });
     };
     //next track
-    const skipTrackHandler = (direction) => {
+    const skipTrackHandler = async (direction) => {
         let currentIndex = datas.findIndex(
             (data) => data.id === currentSong.id
         );
         if (direction === "skip-forward") {
-            setcurrentSong(datas[currentIndex + 1]);
+            await setcurrentSong(datas[currentIndex + 1]);
         } else if (direction === "skip-back") {
-            setcurrentSong(datas[currentIndex - 1]);
-            playAudio(play, audioRef);
+            await setcurrentSong(datas[currentIndex - 1]);
+            await playAudio(play, audioRef);
         } else {
-            setcurrentSong(datas);
+            await setcurrentSong(datas);
         }
-        playAudio(play, audioRef);
+        await playAudio(play, audioRef);
     };
     const trackanim = {
         transform: `translateX(${songInfo.animationPercentage}%)`,
