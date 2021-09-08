@@ -20,6 +20,10 @@
     }
     input {
         width: 100%;
+        -webkit-appearance: none;
+        background: transparent;
+        cursor: pointer;
+        border-radius: 10px;
     }
 }
 .play-control {
@@ -31,5 +35,33 @@
     svg {
         cursor: pointer;
     }
-   
+}
+input[type="range"]:focus {
+    outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    // background: black;
+    border-radius: 50%;
+}
+.track {
+    background: teal;
+    width: 100%;
+    height: 1rem;
+    border-radius: 10px;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.animate-track {
+    background: rgba(196, 196, 196, 0.897);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(0%);
+    pointer-events: none;
 }

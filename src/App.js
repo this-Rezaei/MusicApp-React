@@ -17,13 +17,24 @@ const App = () => {
     const [songInfo, setsongInfo] = useState({
         currentTime: 0,
         duration: 0,
+        animationPercentage: 0,
     });
 
     const TimeUpdatHandler = (e) => {
         const current = e.target.currentTime;
         const duration = e.target.duration;
+
+        const roundedCurrent = Math.round(current);
+        const roundedDuration = Math.round(duration);
+        //Calc Percentage
+        const animation = Math.round((roundedCurrent / roundedDuration) * 100);
         // console.log(duration);
-        setsongInfo({ ...songInfo, currentTime: current, duration: duration });
+        setsongInfo({
+            ...songInfo,
+            currentTime: current,
+            duration: duration,
+            animationPercentage: animation,
+        });
     };
     return (
         <div className="app">

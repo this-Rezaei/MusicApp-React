@@ -20,8 +20,7 @@ const Player = ({
 }) => {
     //UseEffect
     useEffect(() => {
-        
-        NewSong(datas,currentSong.id)
+        NewSong(datas, currentSong.id);
     }, [currentSong]);
 
     //EventHandler
@@ -57,19 +56,23 @@ const Player = ({
         }
         playAudio(play, audioRef);
     };
+    const trackanim = {
+        transform: `translateX(${songInfo.animationPercentage}%)`,
+    };
     return (
         <div className="player">
             <div className="time-control">
                 <p>{getTime(songInfo.currentTime)}</p>
-
-                <input
-                    type="range"
-                    min="0"
-                    max={songInfo.duration || 0}
-                    value={songInfo.currentTime}
-                    onChange={dragHandler}
-                />
-
+                <div className="track">
+                    <input
+                        type="range"
+                        min="0"
+                        max={songInfo.duration || 0}
+                        value={songInfo.currentTime}
+                        onChange={dragHandler}
+                    />
+                    <div style={trackanim} className="animate-track"></div>
+                </div>
                 <p>{getTime(songInfo.duration)}</p>
             </div>
             <div className="play-control">
